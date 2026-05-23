@@ -1,0 +1,281 @@
+
+/* === scale grid: compact controls (loaded last) === */
+
+/* Tight grid spacing */
+.lm-scale-grid .row.g-0 {
+  --bs-gutter-x: 0rem !important;
+  --bs-gutter-y: 0.12rem !important;
+}
+.lm-scale-grid .row.g-0 > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Kill wrapper spacing */
+.lm-scale-grid .shiny-input-container,
+.lm-scale-grid  {
+  margin: 0 0 0.12rem 0 !important;
+  padding: 0 !important;
+}
+
+/* Hide empty labels */
+.lm-scale-grid label,
+.lm-scale-grid .control-label {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* THE INPUT ITSELF (text + numeric) */
+.lm-scale-grid input,
+.lm-scale-grid select,
+.lm-scale-grid textarea,
+.lm-scale-grid .form-control,
+.lm-scale-grid .form-select {
+  padding: 0.06rem 0.22rem !important;
+  height: 1.50rem !important;
+  min-height: 1.50rem !important;
+  line-height: 1.05 !important;
+  font-size: 0.88rem !important;
+  box-sizing: border-box !important;
+}
+
+/* === validation layout: push bottom dock to screen bottom === */
+.lm-main-stack{
+  display:flex;
+  flex-direction:column;
+  min-height: calc(100vh - 9rem); /* navbar + padding allowance */
+}
+.lm-main-top{
+  flex: 1 1 auto;
+  min-height: 0; /* allow children to shrink */
+}
+.lm-bottom-dock{
+  margin-top: auto;
+}
+.lm-main-top .card,
+.lm-main-top .card-body{
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+    /* =========================
+   Sidebar: compact form UI
+   ========================= */
+
+/* Sidebar padding */
+.bslib-sidebar,
+.bslib-sidebar .sidebar-content {
+  padding: 0.35rem !important;
+}
+
+/* Sidebar input spacing */
+.bslib-sidebar .shiny-input-container,
+.bslib-sidebar .mb-3 {
+  margin-bottom: 0.25rem !important;
+}
+
+/* Sidebar labels */
+.bslib-sidebar .shiny-input-container > label,
+.bslib-sidebar .form-label {
+  margin-bottom: 0.10rem !important;
+  font-size: 0.85rem !important;
+  line-height: 1.15 !important;
+}
+
+/* Sidebar controls */
+.bslib-sidebar .form-control,
+.bslib-sidebar .form-select,
+.bslib-sidebar .selectize-control .selectize-input {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.90rem !important;
+}
+
+/* Sidebar buttons */
+.bslib-sidebar .btn {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.90rem !important;
+}
+
+/* Sidebar cards */
+.bslib-sidebar .card {
+  margin-bottom: 0.35rem !important;
+}
+.bslib-sidebar .card-header {
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.85rem !important;
+}
+.bslib-sidebar .card-body {
+  padding: 0.35rem 0.5rem !important;
+}
+
+
+/* Any headings you place inside sidebar cards */
+.bslib-sidebar .card-body h5,
+.bslib-sidebar .card-body h6 {
+  margin: 0.15rem 0 0.25rem 0 !important;
+}
+
+
+  /* Reduce gutters in your dynamic fluidRows (Bootstrap 5 gutters) */
+.bslib-sidebar .row.g-1 {
+  --bs-gutter-x: 0.15rem;
+  --bs-gutter-y: 0.15rem;
+}
+
+
+  /* Optional: tighten headings text spacing in sidebar */
+  .bslib-sidebar h5 { margin-bottom: 0.05rem !important; }
+
+  .lm-header {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    opacity: 0.9;
+  }
+
+
+  .lm-header-row {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--bs-body-bg);
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+
+  .lm-alert-oneline{
+  padding: .15rem .4rem !important;
+  margin: .2rem 0 !important;
+  font-size: .82rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+  /* --- Stats strip --- */
+.stats-strip {
+  padding: 0 !important;
+  margin-bottom: 0.15rem !important;
+}
+
+.stats-strip.card .card-body {
+  padding: 0.15rem 0.15rem !important;
+}
+
+
+/* Make the tiles tight */
+.stats-strip .stats-tile .card-body {
+  padding: 0.2rem 0.2rem !important;
+}
+
+/* Compact title inside tiles */
+.stats-strip .stats-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+  opacity: 0.9;
+}
+
+/* Button width - automatic to fit characters */
+.lm-btn-auto{
+  width: auto !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+/* Button width - fixed */
+.lm-btn-fixed{
+  width: 25ch !important;          /* tweak this number */
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+.lm-file-auto .btn {
+  width: auto !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+
+.lm-file-auto input[type='file'] {
+  width: auto !important;
+}
+
+
+/* Compact verbatim output blocks in the strip */
+.stats-strip pre {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 1.0rem !important;
+  line-height: 1.15 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Compact value_box inside the strip */
+.stats-strip .value-box {
+  padding: 0.15rem 0.2rem !important;
+  min-height: unset !important;
+}
+
+.stats-strip .value-box-title {
+  font-size: 0.6rem !important;
+  margin-bottom: 0.05rem !important;
+}
+
+.stats-strip .value-box-value {
+  font-size: 1.0rem !important;
+  line-height: 1.1 !important;
+}
+
+  .value-box {
+  padding-top: 0.15rem !important;
+  padding-bottom: 0.15rem !important;
+  }
+
+  .value-box-title {
+  font-size: 0.8rem !important;
+  margin-bottom: 0.1rem;
+  }
+
+  .value-box-value {
+  font-size: 1.8rem !important;
+  line-height: 1.1;
+  }
+
+/* Scrollable verification block so it never wrecks the strip */
+.stats-strip .stats-scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 8rem;
+  white-space: nowrap;
+  padding-bottom: 0.1rem;
+}
+
+/* Keep the pre formatted but compact */
+.stats-strip .stats-scroll pre {
+  display: inline-block;
+  min-width: max-content; /* ensures horizontal scroll works */
+}
+
+.lm-sidebar-actions{
+  position: sticky;
+  bottom: 0;
+  background: var(--bs-body-bg);
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+/* A generic compact block for grouped sidebar controls */
+.bslib-sidebar .lm-sidebar-block {
+  margin-bottom: 0.20rem;
+}
