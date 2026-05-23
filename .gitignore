@@ -1,0 +1,13 @@
+# User-defined archives
+extras/
+
+# RStudio internal histories and settings (Do NOT ignore the actual .Rproj file)
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Common OS metadata junk
+.DS_Store
+Thumbs.db
+.positai
